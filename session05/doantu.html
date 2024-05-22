@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4> The Word is : </h4>
+    <input type="text" id="input">
+    <p id="remainingGuess"> Remaining Guess: 3</p>
+    <button id="button" onclick="checkGuess()">Guess</button>
+    <script>
+        let arr = ["tai", "xiu", "nam", "duc", "hoa", "tan", "thu", "tho", "han", "hao"];
+        let randomWord = getRandomWord();
+        let remainingGuesses = 3;
+        console.log(randomWord);
+
+        function getRandomWord() {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function checkGuess() {
+            let guessedWord = document.getElementById("input").value.toLowerCase();
+            if (randomWord.includes(guessedWord)) {
+                document.querySelector("h4").innerHTML = "The Word is: " + randomWord;
+            } else {
+                remainingGuesses--;
+                document.getElementById("remainingGuess").innerHTML = "Remaining Guess: " + remainingGuesses;
+                if (remainingGuesses === 0) {
+                    alert(" nhap sai nhieu lan qua choi lai game thoi .");
+                    randomWord = getRandomWord();
+                    remainingGuesses = 3;
+                    document.getElementById("remainingGuess").innerHTML = "Remaining Guess: " + remainingGuesses;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

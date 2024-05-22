@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let accounts = [
+            {
+                name: "nam",
+                password: "1234",
+                address: 'hà nội'
+            },
+            {
+                name: "nanh",
+                password: "12345",
+                address: 'ninh bình'
+            },
+            {
+                name: "sam",
+                password: "12346",
+                address: 'hcm'
+            }
+        ];
+        // kiêm tra xem có đối tượng ở ninh bình hay không?
+        let result = accounts.some((item, index, arr) => {
+            return item.address === 'ninh bình'
+        })
+        if(result){
+            console.log("Có người ở ninh bình");
+        }else{
+            console.log("K có người ở ninh bình");
+        }
+    </script>
+    
+</body>
+</html>

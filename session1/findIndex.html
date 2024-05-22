@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            tìm kiếm vị trí phần tử thỏa mãn
+            nếu có trả về trị ví
+            ko thì trả về -1
+        */
+       let users=[
+        {
+            id:1,
+            name:'Dũng',
+        },
+        {
+            id:2,
+            name:'Hoàng',
+        },
+        {
+            id:3,
+            name:'1Hoàng',
+        }
+       ]
+    //    tìm kiếm trong mảng users có id = 2 hay không?
+    let search = users.findIndex((item, index, arr)=>{
+        return item.id===3
+    })
+    console.log(search);
+    </script>
+</body>
+</html>

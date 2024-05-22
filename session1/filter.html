@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            filter: lọc
+            tạo ra mảng mới
+            nếu thỏa mãn đk thì xóa phần tử, còn không thì mảng rỗng
+        */
+        let array=[4, 5, 6];
+        let all = array.filter((item, index, arr)=>{
+            // console.log(item);
+            // console.log(index);
+            // console.log(arr);
+            return item>5;
+        })
+        console.log(1111,all);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let account = [
+            {
+                useName: "hoa",
+                password: "1234"
+            },
+            {
+                useName: "hoa",
+                password: "1234 5",
+            },
+            {
+                useName: "hoa",
+                password: "8888 5",
+            },
+            {
+                useName: "hoa",
+                password: "1234"
+            }
+        ];
+        // let result = account.findIndex((item) => item.password.includes(" "));
+        // if(result) {
+        //     console.log(result);
+        // }else{
+        //     console.log("Mọi tài khoản đều hợp lệ");
+        // }
+        account.findIndex((item, index, array) => {
+            if(item.password.includes(" ")){
+                console.log("mat khau cua tai khoan chua dau cách và nó o vi tri   ",index);
+            }
+        })
+    </script>
+</body>
+</html>

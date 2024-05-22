@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- reduce : tính toán
+        thường thì for thường : code dài hơn
+     -->
+    <script>
+        // let numbers = [1,2,3];
+
+        // let sum = numbers.reduce((bienLuuTru, obj) =>{
+        //     return bienLuuTru+obj;
+        // })
+        // console.log(sum);
+
+        let carts = [
+            {
+                name: "iphone1",
+                quantity: 2,
+                price:1,
+            },
+            {
+                name: "iphone2",
+                quantity: 2,
+                price:2,
+            },
+            {
+                name: "iphone3",
+                quantity: 1,
+                price:3,
+            },
+
+        ];
+        let result = carts.reduce((bienLuuTru, obj, arr) => {
+            return bienLuuTru + obj.price * obj.quantity;
+        },0)
+        console.log(result);
+    </script>
+</body>
+</html>

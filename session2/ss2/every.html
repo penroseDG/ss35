@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        every : Tất cả 
+        tức là tấc cả các phần tử trong mảng phải thỏa mãn điều kiện
+        kết quả trả về true/false
+     -->
+     <script>
+
+        let students = [
+            {
+                name: "lanh",
+                gender: "female",
+                address: "hn"
+            },
+            {
+                name: "quân",
+                gender: "female",
+                address: "hn"
+            },
+            {
+                name: "bích",
+                gender: "female",
+                address: "hn"
+            }
+        ];
+        let result = students.every((item, index, arr) => {
+            return item.gender === "female";
+        })
+        console.log(result);
+
+        let result1 = students.every((item, index, arr) => {
+            return item.address === "hn";
+        })
+        console.log(result1);
+     </script>
+</body>
+</html>
